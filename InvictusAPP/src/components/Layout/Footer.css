@@ -1,0 +1,61 @@
+.section-footer{
+    background-color: #1C81D1;
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.info-footer{
+    color: #ffff;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mail{
+    margin-top: -5px;
+    margin-left: 5px;
+}
+
+.tel{
+    margin-top: -5px;
+    margin-left: 5px;
+}
+
+.bi{
+    margin-left: 25px;
+}
+
+.div-contato {
+    display: flex;
+    flex-direction: row;
+}
+
+.div-terms{
+    width: 700px;
+    margin-top: 15px;
+}
+
+.link-terms{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+a{
+    color: #ffff;
+}
+
+a:hover {
+    color: #cecece; /* Altere para a cor desejada */
+}
