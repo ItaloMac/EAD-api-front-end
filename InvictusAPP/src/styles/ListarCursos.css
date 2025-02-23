@@ -1,0 +1,40 @@
+.section-cursos{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.row {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.col-lg-auto {
+    flex: 0 0 auto;
+    width: auto;
+    margin-bottom: 30px;
+    border: 1px solid #D3D3D3;
+    border-radius: 15px;;
+    margin-right: 15px;
+    padding: 10px;
+}
+
+.title-curso{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.modality-curso {
+    font-style: italic;
+    margin-top: -15px;
+}
+
+.price-curso{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-curso {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
