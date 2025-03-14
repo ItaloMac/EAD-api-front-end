@@ -1,0 +1,75 @@
+.card-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 1px #ffff;
+    border-radius: 8px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 30px;
+}
+
+.total-price{
+    display: flex;
+    text-decoration:line-through;
+    color: #ffff;
+    font-size: 18px;
+    justify-content: center;
+    margin-top: 19px;
+}
+
+.montly-price{
+    display: flex;
+    color: #ffff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -20px;
+    justify-content: center;
+}
+
+.price{
+    display: flex;
+    color: #ffff;
+    font-size: 16px;
+    margin-top: -20px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 767px)
+{
+    .card-price{
+        margin-top: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-bottom: 20px;
+    }
+    
+    .total-price{
+        font-size: 16px;
+        margin-top: 13px;
+    }
+    
+    .montly-price{
+        font-size: 22px;
+    }
+    
+    .price{
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+   
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    
+}
+
+@media screen and (min-width: 1441px) {
+    
+}

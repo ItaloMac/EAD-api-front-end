@@ -1,0 +1,54 @@
+.session-teacher {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.session-teacher .carousel {
+    width: 1440px;
+}
+
+.session-teacher .title{
+    justify-content: flex-start;
+}
+
+.teacher {
+    width: calc(33.33333333% - 16.66666667px); /* Ajusta a largura para compensar as margens */
+    margin: 0 12.5px !important;
+    border-style: none;
+}
+
+.teacher:last-child {
+    margin-right: 0; /* Remove a margem do último card */
+}
+
+.title-faculty{
+    
+}
+
+@media screen and (max-width: 767px)
+{
+    .session-teacher .title{
+        font-size: 16px;        
+    }
+
+    .teacher{
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .title-faculty{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+   
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+   
+}

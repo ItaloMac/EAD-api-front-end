@@ -1,0 +1,94 @@
+.div-form-contact{
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.form-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.title-form-contact {
+    width: 35%;
+}
+
+.col-auto{
+    margin-left: 10px;
+}
+
+.button-contact{
+    width: 100%;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 767px)
+{
+    .div-form-contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .title-form-contact{
+        text-align: center;
+        width: 80%;
+    }
+
+    .form-contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .button-contact{
+        padding: 8px 80px 8px 80px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+    .div-form-contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .title-form-contact{
+        text-align: center;
+        width: 80%;
+    }
+
+    .form-contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .button-contact{
+        padding: 8px 80px 8px 80px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .div-form-contact{
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .div-form-contact{
+        width: auto;
+    }
+}

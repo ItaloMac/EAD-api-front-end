@@ -1,14 +1,16 @@
 import { Routes, Route } from "react-router";
-import Cursos from "./pages/Cursos";
 import About from "./pages/About";
-import MenuBar from "./components/Layout/MenuBar"
+import Courses from "./pages/Courses";
+import Course from "./pages/Course";
+import Institutional from "./pages/Institutional";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Cursos />} />
+      <Route path="/" element={<Courses />} />
       <Route path="/about" element={<About />} />
-      <Route path="/menu-bar" element={<MenuBar />} />
+      <Route path="/curso/:id" element={<Course />} />
+      <Route path="/institucional" element={<Institutional/>} />
     </Routes>
   );
 }
