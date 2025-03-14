@@ -1,5 +1,5 @@
-import logo from "../../Utils/imgs/logo.png"
-import "./MenuBar.css"
+import logo from "../../../Utils/imgs/logo.png"
+import "../../Layout/NavBar/MenuBar.css"
 
 function MenuBar(){
     return (
@@ -15,7 +15,7 @@ function MenuBar(){
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <a className="nav-link" aria-current="page" href="/">Cursos</a>
-                        <a className="nav-link" href="#">Institucional</a>
+                        <a className="nav-link" href="/institucional">Institucional</a>
                         <a className="nav-link" href="#">Professores</a>
                         <a className="nav-link" href="#">Depoimentos</a>
                         <a className="nav-link" href="#">Contato</a>

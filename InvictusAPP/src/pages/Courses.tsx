@@ -1,7 +1,7 @@
-import ListarCursos from "../components/ListarCursos"
-import MenuBar from "../components/Layout/MenuBar"
+import MenuBar from "../components/Layout/NavBar/MenuBar"
 import Carrossel from "../components/shared/Carrossel"
-import Footer from "../components/Layout/Footer"
+import Footer from "../components/Layout/Footer/Footer"
+import CourseList from "../components/CorseList/CourseList"
 
 function Cursos() {
     return (
@@ -9,7 +9,7 @@ function Cursos() {
       <title>Invictus - Cursos</title>
       <section><MenuBar/></section>
       <section><Carrossel/></section>
-      <section><ListarCursos/></section>
+      <section><CourseList/></section>
       <Footer/>
       </>
     )

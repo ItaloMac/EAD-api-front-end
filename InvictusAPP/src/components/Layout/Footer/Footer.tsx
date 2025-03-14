@@ -1,5 +1,5 @@
-import logo from "../../Utils/imgs/logo-branco.png"
-import "./Footer.css"
+import logo from "../../../Utils/imgs/logo-branco.png"
+import "../../Layout/Footer/Footer.css"
 
 function Footer(){
     return (

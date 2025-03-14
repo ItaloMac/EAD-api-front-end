@@ -1,0 +1,272 @@
+.section-principal-curso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(0,140,255);
+    background: radial-gradient(circle, rgba(0,140,255,1) 0%, rgba(0,140,255,1) 35%, rgba(0,74,133,1) 100%);
+    height: 613px;
+    padding-top: 100px;
+}
+
+.title{
+    font-size: 3rem;
+    color: #ffff;
+}
+
+.modality{
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+}
+
+.location{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #ffff;
+    margin-top: 16px;
+}
+
+.location-city{
+    font-size: 30px;
+    margin-left: 7px;
+    margin-top: -4px;
+}
+
+.DownArrow{
+    margin-top: 35px;
+}
+
+.t{
+    font-size: 15px;
+}
+
+.session{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    width: 1440px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.session-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+}
+
+.card {
+    padding: 25px 25px 25px 25px;
+    background-color: aliceblue;
+}
+
+.card-text{
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-title{
+    font-size: 22px;
+}
+
+.section-offer {
+    display: flex;
+    justify-content: center;
+    background: rgb(0,134,255);
+    background: radial-gradient(circle, rgba(0,134,255,1) 0%, rgba(0,134,255,1) 47%, rgba(0,134,255,1) 100%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.offer{
+  width: 40%;
+}
+
+.offer h2{
+    display: flex;
+    color: #ffff;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.section-form-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 1440px;
+}
+
+
+@media screen and (max-width: 767px)
+{
+    .section-principal-curso{
+        height: 450px;
+        padding-top: 30px;
+    }
+
+    .title{
+        display: flex;
+        font-size: 28px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .location{
+        margin-left: -26px;
+        height: 20px;
+    }
+
+    .location-city{
+        font-size: 18px ;
+        margin-top: 1px
+    }
+
+    .DownArrow{
+        margin-top: 15px;
+    }
+
+    .cards{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .card-title{
+        margin-top: 8px;
+    }
+
+    .session{
+        width: auto;
+        padding: 15px 20px 20px 20px
+    }
+
+    .session-faculty{
+        margin-bottom: 20px;
+    }
+
+    .session-module{
+        width: auto;
+        padding: 15px 20px 20px 20px
+    }
+
+    .offer{
+        width: 80%;
+    }
+
+    .section-form-contact{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+    .cards{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .card-title{
+        margin-top: 8px;
+    }
+
+    .session{
+        width: auto;
+        padding: 15px 30px 20px 30px
+    }
+
+    .session-faculty{
+        width: auto;
+        padding: 15px 30px 20px 30px
+    }
+    .session-module{
+        width: auto;
+        padding: 15px 20px 20px 20px
+    }
+
+    .offer{
+        width: 80%;
+    }
+
+    .section-form-contact{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .cards{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .card-title{
+        margin-top: 8px;
+    }
+
+    .session{
+        width: auto;
+        padding: 15px 30px 20px 30px
+    }
+
+    .session-faculty{
+        width: 1440px;
+        padding: 15px 30px 20px 30px
+    }
+
+    .session-module{
+        width: 1440px;
+        padding: 15px 20px 20px 20px
+    }
+
+    .offer{
+        width: 60%;
+    }
+
+    .section-form-contact{
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .session-faculty{
+        display: flex;
+        justify-self: center;
+        flex-direction: column;
+        width: 1440px;
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .session-module{
+        display: flex;
+        justify-self: center;
+        flex-direction: column;
+        width: 1440px;
+        padding-top: 15px;
+        padding-bottom: 20px;    
+    }
+
+    .offer{
+        width: 40%;
+    }
+
+    .section-form-contact{
+        width: auto;
+    }
+}

@@ -1,0 +1,233 @@
+.section-institutional{
+    width: auto;
+}
+.div-coordenation{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sub-div-coordenation{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    background-color: #f8f8f8;
+}
+
+.img-coordenation{
+    width: 300px;
+    height: auto;
+}
+
+.div-text-coordenation{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.text-coordenation{
+    text-align: justify;
+}
+
+.div-differences{
+    margin: 0 auto;
+    width: 1400px;
+    height: auto;
+    margin-top: 25px;
+}
+
+.div-students{
+    margin: 0 auto;
+    width: 1400px;
+    height: auto;
+    margin-top: 25px;
+}
+
+.div-text-students{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-img-students{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+
+}
+
+.img-students{
+    margin: 10px;
+}
+
+.div-especializacao-principal {
+    width: 100%;
+    background: linear-gradient(97deg, rgba(67,194,255,1) 0%, rgba(45,107,149,1) 47%, rgba(0,107,191,1) 100%);
+    display: flex;
+    justify-content: center; 
+    margin-top: 25px;
+}
+
+.div-especializacao {
+    width: 100%;
+    max-width: 1440px; 
+    height: 350px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px)
+{
+    .banner-institutional{
+        width: auto;
+    }
+    .div-coordenation{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        margin: 0;
+    }
+    
+    .sub-div-coordenation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        margin-top: 25px;
+    }
+    
+    .img-coordenation{
+        width: 300px;
+    }
+    
+    .div-text-coordenation{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .text-coordenation{
+        text-align: justify;
+    }
+    .div-differences{
+        width: auto;
+        padding: 20px;
+    }
+    
+    .div-students{
+        width: auto;
+        padding: 20px;
+    }
+
+    .div-img-students{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div-especializacao-principal {
+        margin-top: 10px;
+    }
+
+    .div-especializacao {
+        height: 300px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+    .banner-institutional{
+        width: auto;
+    }
+    
+    .sub-div-coordenation{
+        width: 90%;
+    }
+     
+    .div-differences{
+        width: auto;
+        padding: 20px;
+    }
+    
+    .div-students{
+        width: auto;
+        padding: 20px;
+    }
+
+    .div-img-students{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .img-students{
+        width: 48%;
+    }
+
+    .div-especializacao-principal {
+        margin-top: 10px;
+    }
+
+    .div-especializacao {
+        height: 300px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .banner-institutional{
+        width: auto;
+    }
+    
+    .sub-div-coordenation{
+        width: 70%;
+    }
+     
+    .div-differences{
+        width: auto;
+        margin-top: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .div-students{
+        width: auto;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding-left: 40px;
+        padding-right: 40px;    }
+
+    .div-img-students{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .img-students{
+        width: 48%;
+    }
+
+    .div-especializacao-principal {
+        margin-top: 10px;
+    }
+
+    .div-especializacao {
+        height: 300px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    
+}

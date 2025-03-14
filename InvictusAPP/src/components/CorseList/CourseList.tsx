@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { ICursoService } from "../interfaces/ICursoService";
-import { CursoService } from "../Services/CursoService";
-import cursoImg from "../Utils/imgs/curso.png"
+import { ICursoService } from "../../interfaces/ICursoService";
+import { CursoService } from "../../Services/CursoService";
+import cursoImg from "../../Utils/imgs/curso.png"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import "../styles/ListarCursos.css"
+import "../CorseList/CourseList.css"
 import { Link } from "react-router";
 
 

@@ -16,5 +16,12 @@ export interface ICursoService
     curriculum: string,
     registrationPrice: string,
     monthlyPrice: string,
-    totalPrice: string
+    totalPrice: string,
+    imagemURL: string
+    presentation: string,
+    cashPrice: string,
+    discount: string,
+    fullPrice: string,
+    installments: string,
+    type: string
 }
