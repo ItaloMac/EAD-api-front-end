@@ -30,9 +30,9 @@ function ListarCursos(){
       <section className="section-cursos">
         <Container>
         <h2>Cursos</h2>
-          <Row>
+          <Row className="row-cursos">
               {cursos.map((curso) => (
-                  <Col xs="auto" lg="auto">
+                  <Col xs="auto" lg="auto" className="col-cursos">
                     <>
                       <img className="img-curso" src= {cursoImg} alt="imagem do curso" />
                       <p className="title-curso" key={curso.id}>{curso.name}</p>

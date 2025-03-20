@@ -59,3 +59,21 @@ a{
 a:hover {
     color: #cecece; /* Altere para a cor desejada */
 }
+
+@media screen and (max-width: 767px)
+{
+    .div-terms{
+        width: auto;
+    }
+
+    .link-terms{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .link-terms a{
+        margin-bottom: 10px;
+    }
+}

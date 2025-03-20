@@ -1,0 +1,26 @@
+.section-not-found{
+    width: auto;
+}
+
+.div-not-found{
+   max-width: 1440px;
+   display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.div-not-found h1{
+    color: rgba(0,74,133,1);
+}
+
+.message-not-found{
+    width: 100%;
+}
+
+.img-not-found{
+    width: 80%;
+    height: auto;
+
+}

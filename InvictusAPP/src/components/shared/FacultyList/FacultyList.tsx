@@ -21,11 +21,11 @@ function GetProfessoresByIdCurso(){
                     }
                     
                 } catch(error) {
-                    console.error("Erro ao carregar os professores:", error);
+                    console.error("Erro ao carregar os professores do curso:", error);
                 }
             }
             GetProfessoresByIdCurso();
-        } , [id]);
+    } , [id]);
 
         if (!professor)
             return <div>Carregando...</div>;
