@@ -5,7 +5,7 @@ function MenuBar(){
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary nav">
             <div className="container-fluid" style={{ maxWidth: '1440px', margin: '0 auto' }}>
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/">
                     <img src={logo} alt="Logo" width="60" height="auto" className="d-inline-block align-text-top" />
                 </a>          
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,8 +16,7 @@ function MenuBar(){
                     <div className="navbar-nav">
                         <a className="nav-link" aria-current="page" href="/">Cursos</a>
                         <a className="nav-link" href="/institucional">Institucional</a>
-                        <a className="nav-link" href="#">Professores</a>
-                        <a className="nav-link" href="#">Depoimentos</a>
+                        <a className="nav-link" href="/corpodocente">Professores</a>
                         <a className="nav-link" href="#">Contato</a>
                     </div>
                 </div>
