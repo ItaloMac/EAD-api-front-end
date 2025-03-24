@@ -17,7 +17,7 @@ function CreateContact() {
         try {
             const response = await Api.post("api/contact", contact);
             console.log("Contato criado com sucesso:", response.data);
-            alert("Contato criado com sucesso!");
+            alert("Recebemos o seu contato, vamos te retornar em breve.");
         } catch (error) {
             console.error("Erro ao criar contato:", error);
             alert("Erro ao criar contato. Tente novamente.");

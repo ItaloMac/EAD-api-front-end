@@ -84,7 +84,11 @@
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
     .div-form-contact{
         width: auto;
+        margin-right: 150px;
+        margin-left: 50px;
     }
+
+
 }
 
 @media screen and (min-width: 1441px) {

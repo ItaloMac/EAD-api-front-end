@@ -17,7 +17,7 @@ function MenuBar(){
                         <a className="nav-link" aria-current="page" href="/">Cursos</a>
                         <a className="nav-link" href="/institucional">Institucional</a>
                         <a className="nav-link" href="/corpodocente">Professores</a>
-                        <a className="nav-link" href="#">Contato</a>
+                        <a className="nav-link" href="/contato">Contato</a>
                     </div>
                 </div>
             </div>

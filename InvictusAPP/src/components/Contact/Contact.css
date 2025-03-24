@@ -1,0 +1,79 @@
+.contact-wpp{
+    font-size: 28px;
+}
+
+.contact-email{
+    font-size: 28px;
+}
+
+.section-contact{
+    width: auto;
+}
+
+.div-contact{
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.div-formulario{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: #41B6FD;
+}
+
+@media screen and (max-width: 767px)
+{
+    .div-contact{
+        width: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .contact-wpp{
+        margin-top: 15px;
+        font-size: 18px;
+    }
+    
+    .contact-email{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+    .div-contact{
+        width: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .contact-wpp{
+        margin-top: 15px;
+        font-size: 18px;
+    }
+    
+    .contact-email{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .contact-wpp{
+        font-size: 22px;
+    }
+    
+    .contact-email{
+        font-size: 22px;
+    }
+    
+    .section-contact{
+        width: auto;
+    }
+}
