@@ -1,0 +1,29 @@
+.form-container{
+    margin-bottom: 55px;
+}
+
+.custom-btn {
+    background-color: #4a69bd;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background-color: #3b5b9b;
+  }
+  
+  .card {
+    padding: 1.25rem !important; /* override se necessário */
+  }
+  
+  .form-check-label a {
+    color: #4a69bd;
+    text-decoration: underline;
+  }
+  
+  .form-check-label a:hover {
+    color: #3b5b9b;
+  }

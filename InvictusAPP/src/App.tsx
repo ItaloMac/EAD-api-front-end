@@ -7,6 +7,7 @@ import Faculty from "./pages/Faculty"
 import ErrorBoundary from "./pages/ErrorBoundary";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
+import CreateAccount from "./pages/CreateAccount";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/institucional" element={<Institutional />} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="/corpodocente" element={<Faculty />} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="/contato" element={<Contact />} errorElement={<ErrorBoundary error={undefined} />} />
+      <Route path="/criar-conta" element={<CreateAccount />} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
