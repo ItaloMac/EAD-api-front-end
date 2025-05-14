@@ -18,6 +18,23 @@ function MenuBar(){
                         <a className="nav-link" href="/institucional">Institucional</a>
                         <a className="nav-link" href="/corpodocente">Professores</a>
                         <a className="nav-link" href="/contato">Contato</a>
+                        {/* Dropdown do Portal do Aluno */}
+                       
+                    </div>
+                    <div className="dropdown">
+                        <button
+                            className="btn btn-primary dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Área do Aluno
+                        </button>
+                        <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a className="dropdown-item" href="/login">Login</a></li>
+                            <li><a className="dropdown-item" href="/criar-conta">Cadastrar</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

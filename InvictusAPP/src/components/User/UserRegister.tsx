@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
-import { Api } from "../providers/Api";
+import { Api } from "../../providers/Api";
 import './UserRegister.css';
 import axios from "axios";
-import isValidCPF from "../Utils/CpfValidade";
+import isValidCPF from "../../Utils/CpfValidade";
 import { useNavigate } from "react-router";
 
 function UserRegister() {
@@ -78,7 +78,7 @@ function UserRegister() {
 
     return (
         <>
-        <div className="container mt-5 form-container">
+        <div className="container mt-5 form-container-register">
             <div className="row justify-content-center">
                 <div className="col-md-6 col-lg-5">
                     <div className="card shadow p-3 border-0 rounded-4">

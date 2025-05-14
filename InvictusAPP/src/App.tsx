@@ -8,6 +8,9 @@ import ErrorBoundary from "./pages/ErrorBoundary";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import CreateAccount from "./pages/CreateAccount";
+import Login from "./pages/UserLogin";
+import ForgotPassword from "./pages/ForgotPassword";
+import PasswordReset from "./pages/PasswordReset";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
       <Route path="/corpodocente" element={<Faculty />} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="/contato" element={<Contact />} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="/criar-conta" element={<CreateAccount />} errorElement={<ErrorBoundary error={undefined} />} />
+      <Route path="/login" element={<Login />} errorElement={<ErrorBoundary error={undefined} />} />
+      <Route path="/esqueci-senha" element={<ForgotPassword />} errorElement={<ErrorBoundary error={undefined} />} />
+      <Route path="/reset-password" element={<PasswordReset />} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

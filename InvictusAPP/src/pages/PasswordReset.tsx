@@ -1,15 +1,15 @@
 import MenuBar from "../components/Layout/NavBar/MenuBar"
-import UserRegister from "../components/User/UserRegister"
 import Footer from "../components/Layout/Footer/Footer"
+import ResetPassword from "../components/User/ResetPassword"
 
-function CriarConta() {
+function NovaSenha() {
     return (
      <>
-      <title>Invictus - Criar Conta</title>
+      <title>Invictus - Nova Senha</title>
       <section><MenuBar/></section>
-      <section><UserRegister/></section>
+      <section><ResetPassword/></section>
       <Footer/>
       </>
     )
   }
-export default CriarConta
+export default NovaSenha

@@ -1,15 +1,15 @@
 import MenuBar from "../components/Layout/NavBar/MenuBar"
-import UserRegister from "../components/User/UserRegister"
+import LoginUser from "../components/User/LoginUser"
 import Footer from "../components/Layout/Footer/Footer"
 
-function CriarConta() {
+function Login() {
     return (
      <>
-      <title>Invictus - Criar Conta</title>
+      <title>Invictus - Login</title>
       <section><MenuBar/></section>
-      <section><UserRegister/></section>
+      <section><LoginUser/></section>
       <Footer/>
       </>
     )
   }
-export default CriarConta
+export default Login

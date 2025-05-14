@@ -1,0 +1,19 @@
+.form-container{
+    min-height: 600px;
+    padding-top: 75px;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container{
+        min-height: 550px;
+        padding-top: 0px;
+    }
+    
+}
+
+@media screen and (min-width: 1680px) {
+    .form-container{
+        min-height: 650px;
+    }
+    
+}
