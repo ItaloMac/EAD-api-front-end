@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     proxy: process.env.NODE_ENV === 'development' ? {
       '/api': {
-        target: process.env.VITE_BASE_URL || 'http://localhost:5000', // URL do backend
+        target: process.env.VITE_BASE_URL_PROD || 'http://localhost:5000', // URL do backend
         changeOrigin: true,
         secure: false,
       },
