@@ -7,17 +7,8 @@ dotenv.config()
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  server: {
-    proxy: process.env.NODE_ENV === 'development' ? {
-      '/api': {
-        target: process.env.VITE_BASE_URL_PROD || 'http://localhost:5000', // URL do backend
-        changeOrigin: true,
-        secure: false,
-      },
-    } : undefined,
-  },
-  build: {
-    outDir: 'dist', // Certifique-se de que o diretório de saída está correto
-  },
-})
+    plugins: [react()],
+    build: {
+      outDir: 'dist', // Diretório de saída para o build
+    },
+  })
