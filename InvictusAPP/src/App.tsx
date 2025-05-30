@@ -11,6 +11,7 @@ import CreateAccount from "./pages/CreateAccount";
 import Login from "./pages/UserLogin";
 import ForgotPassword from "./pages/ForgotPassword";
 import PasswordReset from "./pages/PasswordReset";
+import ConfirmacaoEmail from "./pages/ConfirmacaoEmail";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path="/login" element={<Login />} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="/esqueci-senha" element={<ForgotPassword />} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="/reset-password" element={<PasswordReset />} errorElement={<ErrorBoundary error={undefined} />} />
+      <Route path="/confirmacao-email" element={<ConfirmacaoEmail />} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
