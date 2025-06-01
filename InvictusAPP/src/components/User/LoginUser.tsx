@@ -45,9 +45,10 @@ function UserLogin() {
             (loginData.Password as string).length < 6 || // Verifica se a senha tem menos de 6 caracteres
             !/[A-Z]/.test(loginData.Password as string) || // Verifica se não contém pelo menos uma letra maiúscula
             !/[a-z]/.test(loginData.Password as string) || // Verifica se não contém pelo menos uma letra minúscula
-            !/[0-9]/.test(loginData.Password as string)    // Verifica se não contém pelo menos um número
+            !/[0-9]/.test(loginData.Password as string) ||
+            !/[!@#$%^&*(),.?":{}|<>]/.test(loginData.Password as string)   // Verifica se não contém pelo menos um número
         ) {
-            setErrorMessage("A senha deve ter pelo menos 6 caracteres, incluindo uma letra maiúscula, uma letra minúscula e um número.");
+            setErrorMessage("A senha deve ter pelo menos 6 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caracter especial.");
             return;
         }
         try {

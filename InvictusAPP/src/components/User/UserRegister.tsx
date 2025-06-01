@@ -51,13 +51,15 @@ function UserRegister() {
             return;
         }
 
+        const password = String(user.Password);
         if (
-            (user.Password as string).length < 6 || // Verifica se a senha tem menos de 6 caracteres
-            !/[A-Z]/.test(user.Password as string) || // Verifica se não contém pelo menos uma letra maiúscula
-            !/[a-z]/.test(user.Password as string) || // Verifica se não contém pelo menos uma letra minúscula
-            !/[0-9]/.test(user.Password as string)    // Verifica se não contém pelo menos um número
+            password.length < 6 ||
+            !/[A-Z]/.test(password) ||
+            !/[a-z]/.test(password) ||
+            !/[0-9]/.test(password) ||
+            !/[!@#$%^&*(),.?":{}|<>]/.test(password)
         ) {
-            setErrorMessage("A senha deve ter pelo menos 6 caracteres, incluindo uma letra maiúscula, uma letra minúscula e um número.");
+            setErrorMessage("A senha deve ter pelo menos 6 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caracter especial.");
             return;
         }
         try {
