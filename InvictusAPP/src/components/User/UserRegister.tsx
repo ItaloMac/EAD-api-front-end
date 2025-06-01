@@ -59,7 +59,7 @@ function UserRegister() {
             !/[0-9]/.test(password) ||
             !/[!@#$%^&*(),.?":{}|<>]/.test(password)
         ) {
-            setErrorMessage("A senha deve ter pelo menos 6 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caracter especial.");
+            setErrorMessage("A senha deve ter pelo menos 6 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial.");
             return;
         }
         try {
@@ -118,6 +118,7 @@ function UserRegister() {
                             <div className="mb-2">
                                 <label htmlFor="validateCPF" className="form-label">CPF:</label>
                                 <input className="form-control" type="text" name="CPF" id="CPF" required maxLength={11}  />
+                                <p className="text-muted small mt-2">Não utilize traços e pontos.</p>
                             </div>
 
                             <div className="mb-3">
@@ -139,6 +140,7 @@ function UserRegister() {
                                         {eyeIsClosed ? <VscEyeClosed /> : <VscEye />}
                                     </button>
                                 </div>
+                                <p className="text-muted small mt-2">A senha deve conter no mínimo 6 caracteres, uma letra maiúscula, uma minúscula e um caractere especial</p>
                             </div>
                             <div className="form-check mb-2 small">
                                 <input className="form-check-input" type="checkbox" id="privacyPolicy" required />
