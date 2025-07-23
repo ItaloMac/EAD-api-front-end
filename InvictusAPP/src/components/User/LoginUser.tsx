@@ -59,8 +59,9 @@ function UserLogin() {
             const response = await Api.post("/login", loginData);
             console.log(response.data);
             setSucessMessage("Login realizado com sucesso.");
+            setSucessMessage(response.data);
             setTimeout(() => {
-                navigate("/");
+                 navigate("/");
             }, 1000);
         } catch (error) {
             if (axios.isAxiosError(error) && error.response) {
