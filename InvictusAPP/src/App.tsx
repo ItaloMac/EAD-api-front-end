@@ -14,7 +14,7 @@ import PasswordReset from "./pages/PasswordReset";
 import ConfirmacaoEmail from "./pages/ConfirmacaoEmail";
 import Users from "./pages/admin/users/users";
 import AdminPanel from "./pages/admin/admin-panel";
-import ProtectedAdminRoute from "./components/admin/ProtectedAdminRoute";
+import ProtectedAdminRoute from "./interfaces/ProtectedAdminRoute";
 
 function App() {
   return (

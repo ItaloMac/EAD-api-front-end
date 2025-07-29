@@ -1,7 +1,7 @@
 import { useState, useEffect, JSX } from "react";
 import { useNavigate } from "react-router"; // Certifique-se de usar o roteador correto
-import { IUserDetails } from "../../interfaces/IUserLogin";
-import { Api } from "../../providers/Api";
+import { IUserDetails } from "./IUserLogin";
+import { Api } from "../providers/Api";
 
 interface ProtectedAdminRouteProps {
     children: JSX.Element; // Componente filho a ser renderizado

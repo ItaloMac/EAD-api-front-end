@@ -1,4 +1,53 @@
-.div-principal{
+.div-form {
     display: flex;
-    flex-direction: row;
-}
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .custom-form {
+    height: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    width: 60%; /* ocupa metade da largura em telas grandes */
+    min-width: 200px;
+    padding: 0;
+  }
+  
+  .custom-navbar {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  
+  .custom-buttom-navbar {
+    min-height: 38px;
+    min-width: 150px;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0 12px;
+    flex-shrink: 0;
+    background-color: #056DBF;
+  }
+  
+  /* Responsivo para telas pequenas */
+  @media (max-width: 576px) {
+    .div-form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .custom-form {
+      width: 100% !important;
+      flex: none;
+    }
+  
+    .custom-buttom-navbar {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
