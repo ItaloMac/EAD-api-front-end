@@ -1,17 +1,17 @@
 import { useState, useRef } from "react";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
-import { Api } from "../../providers/Api";
+//import { Api } from "../../providers/Api";
 import axios from "axios";
-import { useNavigate } from "react-router";
 import "./LoginUser.css";
+import { UserLoginService } from "../../Services/UserLoginService";
+import { useNavigate } from "react-router";
 
 function UserLogin() {
     const [errorMessage, setErrorMessage] = useState("");
-    const [sucessMessage, setSucessMessage] = useState("");
-    const [eyeIsClosed, setEyeState] = useState(false); // Estado para alternar o ícone
-    const inputRef = useRef<HTMLInputElement>(null);
     const navigate = useNavigate();
-
+    const [sucessMessage, setSucessMessage] = useState("");
+    const [eyeIsClosed, setEyeState] = useState(false);
+    const inputRef = useRef<HTMLInputElement>(null);
 
     const toggleShow = () => {
         if (inputRef.current) {
@@ -31,44 +31,47 @@ function UserLogin() {
         setSucessMessage("");
         const formData = new FormData(event.currentTarget);
 
+        // Convertendo FormData para IUserLoginRequest
         const loginData = {
-            Email: formData.get("Email"),
-            Password: formData.get("Password"),
+            email: formData.get("Email")?.toString() || '',
+            password: formData.get("Password")?.toString() || ''
         };
 
-        if (!loginData.Email || !loginData.Password) {
+        if (!loginData.email || !loginData.password) {
             setErrorMessage("Preencha todos os campos obrigatórios.");
             return;
         }
 
         if (
-            (loginData.Password as string).length < 6 || // Verifica se a senha tem menos de 6 caracteres
-            !/[A-Z]/.test(loginData.Password as string) || // Verifica se não contém pelo menos uma letra maiúscula
-            !/[a-z]/.test(loginData.Password as string) || // Verifica se não contém pelo menos uma letra minúscula
-            !/[0-9]/.test(loginData.Password as string) ||
-            !/[!@#$%^&*(),.?":{}|<>]/.test(loginData.Password as string)   // Verifica se não contém pelo menos um número
+            loginData.password.length < 6 ||
+            !/[A-Z]/.test(loginData.password) ||
+            !/[a-z]/.test(loginData.password) ||
+            !/[0-9]/.test(loginData.password) ||
+            !/[!@#$%^&*(),.?":{}|<>]/.test(loginData.password)
         ) {
             setErrorMessage("A senha deve ter pelo menos 6 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caracter especial.");
             return;
         }
-        try {
-            // Verifica se o email está confirmado
-            const emailCheckResponse = await Api.post("/api/EmailConfirmation/check-email-confirmation", { Email: loginData.Email });
-            console.log(emailCheckResponse.data);
 
-            const response = await Api.post("/login", loginData);
-            console.log(response.data);
-            setSucessMessage("Login realizado com sucesso.");
-            setSucessMessage(response.data);
-            setTimeout(() => {
-                 navigate("/");
-            }, 1000);
-        } catch (error) {
-            if (axios.isAxiosError(error) && error.response) {
-                setErrorMessage(error.response.data.error);
+        try {
+            const response = await UserLoginService.postUserLoginAsync(loginData);
+            const userType = response.token.userType;
+            localStorage.setItem("token", response.token.token);
+            localStorage.setItem("userId", response.token.userId);
+            if (userType === 1) {
+              navigate("/portal-aluno");
+            } else if (userType === 2) {
+              navigate("/admin/painel-administrativo");
             }
-            if (axios.isAxiosError(error) && error.response?.status === 401) {
-                setErrorMessage("Senha inválida.");
+
+           } catch (error) {
+            if (axios.isAxiosError(error) && error.response) {
+                const data = error.response.data;
+                const message = data?.Error || data?.error || "Erro ao realizar login";
+
+                setErrorMessage(message);
+            } else {
+                setErrorMessage("Erro inesperado ao tentar fazer login.");
             }
         }
     };

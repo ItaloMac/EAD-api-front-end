@@ -1,5 +1,5 @@
-import MenuBarAdmin from "./layout/MenuBarAdmin";
-import MenuLateral from "./shared/menu-lateral";
+import MenuBarAdmin from "../../components/admin/layout/MenuBarAdmin";
+import MenuLateral from "../../components/admin/shared/menu-lateral";
 
 function AdminPanel() {
   return (

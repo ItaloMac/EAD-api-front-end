@@ -16,12 +16,12 @@ function MenuBarAdmin(){
 
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                    <a className="bi bi-speedometer2 me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} aria-current="page" href="/painel-administrativo">Dashboard</a>
-                        <a className="bi bi-people me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} aria-current="page" href="/usuarios">Usuarios</a>
-                        <a className="bi bi-clipboard2 me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/matriculas">Matrículas</a>
-                        <a className="bi bi-backpack2 me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/turmas">Turmas</a>
-                        <a className="bi bi-mortarboard me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/cursos">Cursos</a>
-                        <a className="bi bi-cash-coin me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/financeiro">Financeiro</a>
+                    <a className="bi bi-speedometer2 me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} aria-current="page" href="/admin/painel-administrativo">Dashboard</a>
+                        <a className="bi bi-people me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} aria-current="page" href="/admin/usuarios">Alunos</a>
+                        <a className="bi bi-clipboard2 me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/admin/matriculas">Matrículas</a>
+                        <a className="bi bi-backpack2 me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/admin/turmas">Turmas</a>
+                        <a className="bi bi-mortarboard me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/admin/cursos">Cursos</a>
+                        <a className="bi bi-cash-coin me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/admin/financeiro">Financeiro</a>
 
                     </div>
                     <hr
