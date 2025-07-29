@@ -1,9 +1,9 @@
-import {Api} from '../providers/Api';
-import { IUserLogin } from '../interfaces/IUserLogin';
+import { Api } from "../providers/Api";
+import { IUserLoginRequest, IUserLoginResponse } from "../interfaces/IUserLogin";
 
 export const UserLoginService = {
-    async postUserLoginAsync(loginData: IUserLogin): Promise<IUserLogin> {
-        const loginRequest = await Api.post<IUserLogin>("api/User", loginData);
-        return loginRequest.data;
-    }
+  async postUserLoginAsync(loginData: IUserLoginRequest): Promise<IUserLoginResponse> {
+    const response = await Api.post("api/Auth/login", loginData);
+    return response.data;
+  },
 };
