@@ -16,7 +16,6 @@ function ProtectedAdminRoute({ children }: ProtectedAdminRouteProps) {
         async function AuthUser() {
             try {
                 const userId = localStorage.getItem("userId");
-                console.log("userId", userId);
                 if (!userId) {
                     console.error("Usuário não está logado.");
                     navigate("/login");
@@ -24,7 +23,6 @@ function ProtectedAdminRoute({ children }: ProtectedAdminRouteProps) {
                 }
 
                 const response = await Api.get<IUserDetails>(`api/admin/usuarios/${userId}`);
-                console.log("Dados do usuário:", response.data);
 
                 const userType = response.data.userType;;
                 if (userType == 1) { // Verifica se o usuário é do tipo administrador

@@ -15,6 +15,7 @@ import ConfirmacaoEmail from "./pages/ConfirmacaoEmail";
 import Users from "./pages/admin/users/users";
 import AdminPanel from "./pages/admin/admin-panel";
 import ProtectedAdminRoute from "./interfaces/ProtectedAdminRoute";
+import UserData from "./pages/admin/users/userdata";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Route path="/confirmacao-email" element={<ConfirmacaoEmail />} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="/admin/painel-administrativo" element={<ProtectedAdminRoute><AdminPanel /></ProtectedAdminRoute>} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="/admin/usuarios" element={<ProtectedAdminRoute><Users /></ProtectedAdminRoute>} errorElement={<ErrorBoundary error={undefined} />} />
+      '<Route path="/admin/aluno/:id" element={<ProtectedAdminRoute><UserData /></ProtectedAdminRoute>} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
