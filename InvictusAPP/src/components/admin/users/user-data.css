@@ -1,0 +1,56 @@
+/* Centraliza o formulário */
+.custom-form {
+  max-width: 80%;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+/* Espaçamento entre os grupos de input */
+.custom-form .form-group-custom {
+  margin-bottom: 16px;
+}
+
+/* Labels */
+.custom-form .form-group-custom label {
+  margin-bottom: 4px;
+  font-weight: 500;
+  display: block;
+}
+
+/* Inputs */
+.custom-form .form-group-custom input {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+/* Centraliza a imagem e o input file */
+.custom-form .text-center img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.profile-upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha à esquerda */
+}
+
+/* Responsividade para manter 2 colunas */
+@media (min-width: 768px) {
+  .custom-form .form-group-custom {
+    display: inline-block;
+    width: 48%;
+    margin-right: 4%;
+  }
+
+  .custom-form .form-group-custom:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-form .form-group-custom {
+    width: 100%;
+    margin-right: 0;
+  }
+}

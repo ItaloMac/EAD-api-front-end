@@ -37,11 +37,10 @@ function UsersList() {
             <h2 className="mb-4">Alunos Cadastrados</h2>
             <nav className="navbar custom-navbar">
             <div className="div-form">
-              <form className="d-flex custom-form" role="search">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" 
+              <form className="d-flex custom-form-users" role="search">
+                <input className="form-control me-2" type="search" placeholder="Pesquisar aluno" aria-label="Search" 
                 value={filtro}
                 onChange={(e) => setFiltro(e.target.value)}/>
-                <button className=" custom-buttom-navbar" type="submit">Pesquisar Aluno</button>
               </form>
             </div>
           </nav>
@@ -70,7 +69,6 @@ function UsersList() {
                         <td className="text-center">
                         <Link to={`/admin/aluno/${usuario.id}`} className="bi bi-person-gear mx-2 text-dark" title="Dados do aluno"></Link>
                         <Link to={`/admin/aluno/${usuario.id}/matriculas`} className="bi bi-clipboard2 mx-2 text-dark" title="Matrículas"></Link>
-                        <Link to={`/admin/aluno/${usuario.id}/atualizar-dados`} className="bi bi-pencil-square mx-2 text-dark" title="Atualizar dados"></Link>
                         <Link to={`/admin/aluno/${usuario.id}/excluir`} className="bi bi-person-dash-fill mx-2 text-dark" title="Excluir"></Link>
                         </td>
                       </tr>

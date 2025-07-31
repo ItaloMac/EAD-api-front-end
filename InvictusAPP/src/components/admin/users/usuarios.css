@@ -8,12 +8,12 @@
     flex-wrap: wrap;
   }
   
-  .custom-form {
+  .custom-form-users {
     height: 40px;
     min-height: 40px;
     display: flex;
     align-items: center;
-    width: 60%; /* ocupa metade da largura em telas grandes */
+    width: 100%; /* ocupa metade da largura em telas grandes */
     min-width: 200px;
     padding: 0;
   }
@@ -40,7 +40,7 @@
       align-items: stretch;
     }
   
-    .custom-form {
+    .custom-form-users {
       width: 100% !important;
       flex: none;
     }
