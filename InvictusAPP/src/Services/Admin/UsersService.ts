@@ -1,5 +1,5 @@
 import {Api} from '../../providers/Api';
-import { IGetAllUsersService, IGetUserByIdService, IUpdateUserService } from '../../interfaces/admin/IUsersService';
+import { IGetAllUsersService, IGetUserByIdService, IUpdateUserService, IUsersRegistrationService } from '../../interfaces/admin/IUsersService';
 
 export const UsersService = {
     async getAllUsers(): Promise<IGetAllUsersService[]> {
@@ -27,6 +27,17 @@ export const UsersService = {
             await Api.put(`api/admin/usuarios/update/${id}`, data);
         } catch (error) {
             console.error("Erro ao atualizar usuario:", error);
+            throw error;
+        }
+    },
+
+    async getRegistrationByUserId(userId:string): Promise<IUsersRegistrationService[]> {
+        try {
+            const response = await Api.get<IUsersRegistrationService[]>(`api/admin/usuarios/${userId}/matriculas`);
+            return response.data;
+        }
+        catch (error) {
+            console.error("Erro ao buscar matriculas do usuario:", error);
             throw error;
         }
     }

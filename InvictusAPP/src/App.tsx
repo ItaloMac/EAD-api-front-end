@@ -16,6 +16,7 @@ import Users from "./pages/admin/users/users";
 import AdminPanel from "./pages/admin/admin-panel";
 import ProtectedAdminRoute from "./interfaces/ProtectedAdminRoute";
 import UserData from "./pages/admin/users/userdata";
+import UserRegistrations from "./pages/admin/users/userregistrations";
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
       <Route path="/admin/painel-administrativo" element={<ProtectedAdminRoute><AdminPanel /></ProtectedAdminRoute>} errorElement={<ErrorBoundary error={undefined} />} />
       <Route path="/admin/usuarios" element={<ProtectedAdminRoute><Users /></ProtectedAdminRoute>} errorElement={<ErrorBoundary error={undefined} />} />
       '<Route path="/admin/aluno/:id" element={<ProtectedAdminRoute><UserData /></ProtectedAdminRoute>} errorElement={<ErrorBoundary error={undefined} />} />
+      '<Route path="/admin/aluno/:id/matriculas" element={<ProtectedAdminRoute><UserRegistrations /></ProtectedAdminRoute>} errorElement={<ErrorBoundary error={undefined} />} />
+
+
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

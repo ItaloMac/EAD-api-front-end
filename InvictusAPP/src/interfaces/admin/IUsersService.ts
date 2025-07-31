@@ -28,3 +28,18 @@ export interface IUpdateUserService {
     userType: number;
     vindiCustomerId: string;
 }
+
+export interface IUsersRegistrationService {
+    id: string; 
+    registrationStatus: string; 
+    registrationDate: string; 
+    cancellationDate?: string; 
+    class: {
+        id: string; 
+        name: string; 
+        curso: {
+            id: string;
+            name: string; 
+        };
+    };
+}
