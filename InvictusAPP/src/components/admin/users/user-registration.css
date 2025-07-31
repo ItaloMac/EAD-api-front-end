@@ -1,0 +1,40 @@
+.fixed-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px;
+}
+
+.cards-container {
+    display: flex; /* Alinha os cards lado a lado */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha se necessário */
+    justify-content: flex-start; /* Alinha os cards à esquerda */
+    gap: 20px; /* Adiciona espaçamento entre os cards */
+}
+
+.custom-card {
+    flex: 0 1 calc(33.333% - 20px); /* Cada card ocupa 1/3 da largura da linha */
+    min-width: 300px; /* Define largura mínima para os cards */
+    max-width: 400px; /* Define largura máxima para os cards */
+    padding: 20px; /* Adiciona espaçamento interno */
+    border-radius: 8px; /* Arredonda os cantos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Aumenta o tamanho do título */
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem; /* Ajusta o tamanho do texto */
+    margin-bottom: 10px; /* Adiciona espaçamento entre os textos */
+}
+
+.btn-custom {
+    background-color: #007bff; /* Cor personalizada */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    margin-left: 15px;
+}
