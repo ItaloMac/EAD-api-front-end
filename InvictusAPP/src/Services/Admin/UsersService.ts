@@ -40,5 +40,15 @@ export const UsersService = {
             console.error("Erro ao buscar matriculas do usuario:", error);
             throw error;
         }
+    },
+
+    async deleteUser(id: string): Promise<void> {
+        try {
+            await Api.delete(`api/admin/usuarios/delete/${id}`);
+        } catch (error)
+        {
+            console.error("Erro ao deletar usuario:", error);
+            throw error;
+        }
     }
 }

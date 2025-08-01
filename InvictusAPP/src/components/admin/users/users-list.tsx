@@ -7,7 +7,10 @@ import "./usuarios.css"; // Import the CSS file for styling
 function UsersList() {
   const [usuarios, setUsers] = useState<IGetAllUsersService[]>([]);
   const [filtro, setFiltro] = useState<string>(""); // novo estado
-
+  const [showModal, setShowModal] = useState(false); // Controla a exibição do modal
+  const [selectedUserId, setSelectedUserId] = useState<string | null>(null); // Armazena o ID do usuário selecionado
+  const [message, setMessage] = useState("");
+  const [messageError, setMessageError] = useState("");
     
   useEffect(() =>{
       async function CarregarUsuarios(){
@@ -24,6 +27,21 @@ function UsersList() {
       CarregarUsuarios();
 
   }, []);
+
+  const handleDelete = async () => {
+    if (!selectedUserId) return;
+
+    try {
+      await UsersService.deleteUser(selectedUserId);
+      setMessage("Usuário deletado com sucesso.");
+      setShowModal(false); // Fecha o modal após a exclusão
+      setUsers((prev) => prev.filter((user) => user.id !== selectedUserId)); // Remove o usuário da lista
+    } catch (error) {
+      console.error("Erro ao deletar usuário:", error);
+      setMessageError("Erro ao deletar usuário.");
+    }
+  };
+
 
   const usuariosFiltrados = usuarios.filter((usuario) =>
     `${usuario.name} ${usuario.lastName} ${usuario.email}`
@@ -67,10 +85,16 @@ function UsersList() {
                         <td>{usuario.lastName}</td>
                         <td>{usuario.email}</td>
                         <td className="text-center">
-                        <Link to={`/admin/aluno/${usuario.id}`} className="bi bi-person-gear mx-2 text-dark" title="Dados do aluno"></Link>
-                        <Link to={`/admin/aluno/${usuario.id}/matriculas`} className="bi bi-clipboard2 mx-2 text-dark" title="Matrículas"></Link>
-                        <Link to={`/admin/aluno/${usuario.id}/excluir`} className="bi bi-person-dash-fill mx-2 text-dark" title="Excluir"></Link>
-                        </td>
+                          <Link to={`/admin/aluno/${usuario.id}`} className="bi bi-person-gear mx-2 text-dark" title="Dados do aluno"></Link>
+                          <Link to={`/admin/aluno/${usuario.id}/matriculas`} className="bi bi-clipboard2 mx-2 text-dark" title="Matrículas"></Link>
+                          <button onClick={() => {
+                            setSelectedUserId(usuario.id);
+                            setShowModal(true);
+                          }}
+                          className="bi bi-person-dash-fill mx-2 text-dark btn btn-link"
+                          title="Excluir"
+                        ></button>                        
+                      </td>
                       </tr>
                     ))
                   )}
@@ -79,6 +103,29 @@ function UsersList() {
             </div>
 
           </div>
+           {/* Modal */}
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h4>Tem certeza que deseja deletar este usuário?</h4>
+            <div className="modal-buttons">
+              <button onClick={handleDelete} className="btn btn-danger">
+                Deletar Usuário
+              </button>
+              <button
+                onClick={() => setShowModal(false)}
+                className="btn btn-secondary"
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Mensagens de sucesso ou erro */}
+      {message && <p className="success-message">{message}</p>}
+      {messageError && <p className="error-message">{messageError}</p>}
     </>
   );
 }

@@ -36,8 +36,6 @@ function App() {
       <Route path="/admin/usuarios" element={<ProtectedAdminRoute><Users /></ProtectedAdminRoute>} errorElement={<ErrorBoundary error={undefined} />} />
       '<Route path="/admin/aluno/:id" element={<ProtectedAdminRoute><UserData /></ProtectedAdminRoute>} errorElement={<ErrorBoundary error={undefined} />} />
       '<Route path="/admin/aluno/:id/matriculas" element={<ProtectedAdminRoute><UserRegistrations /></ProtectedAdminRoute>} errorElement={<ErrorBoundary error={undefined} />} />
-
-
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
