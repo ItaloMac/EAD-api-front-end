@@ -1,0 +1,134 @@
+.add-teacher-form {
+  margin: 30px;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.add-teacher-form h2 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.add-teacher-form .form-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.add-teacher-form .form-select {
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 14px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.add-teacher-form .form-select:focus {
+  border-color: #056DBF;
+  box-shadow: 0 0 0 0.2rem rgba(5, 109, 191, 0.25);
+}
+
+.add-teacher-form .form-select:disabled {
+  background-color: #e9ecef;
+  opacity: 0.65;
+}
+
+.teacher-info {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.selected-teacher-info {
+  padding: 12px 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  color: #495057;
+  font-size: 14px;
+}
+
+.add-teacher-form .btn {
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.15s ease-in-out;
+}
+
+.add-teacher-form .btn-primary {
+  background-color: #056DBF;
+  border-color: #056DBF;
+}
+
+.add-teacher-form .btn-primary:hover:not(:disabled) {
+  background-color: #045a9f;
+  border-color: #045a9f;
+}
+
+.add-teacher-form .btn-primary:disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.add-teacher-form .btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.add-teacher-form .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.add-teacher-form .alert {
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.add-teacher-form .form-text {
+  margin-top: 8px;
+}
+
+.add-teacher-form .form-text a {
+  color: #056DBF;
+  text-decoration: none;
+}
+
+.add-teacher-form .form-text a:hover {
+  color: #045a9f;
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  .add-teacher-form {
+    margin: 15px;
+    padding: 15px;
+  }
+  
+  .add-teacher-form .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .add-teacher-form .text-end {
+    text-align: center !important;
+  }
+  
+  .add-teacher-form .me-2 {
+    margin-right: 0 !important;
+  }
+}
+
+/* Estilo para quando não há professores */
+.add-teacher-form .form-select:invalid {
+  border-color: #dc3545;
+}
+
+.add-teacher-form .form-select:invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}

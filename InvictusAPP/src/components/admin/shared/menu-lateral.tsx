@@ -35,6 +35,11 @@ function MenuLateral() {
       </a>
     </li>
     <li className="nav-item">
+      <a href="/admin/professores" className="nav-link" style={{ color: '#0c2f4f', fontSize: '1.25rem',  marginTop:'10px' }}>
+        <i className="bi bi-person-video3 me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f' }}></i> Professores
+      </a>
+    </li>
+    <li className="nav-item">
       <a href="/admin/cursos" className="nav-link" style={{ color: '#0c2f4f', fontSize: '1.25rem',  marginTop:'10px' }}>
         <i className="bi bi-mortarboard me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f' }}></i> Cursos
       </a>

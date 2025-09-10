@@ -1,0 +1,101 @@
+.teacher-create-form {
+  margin: 30px;
+  padding: 20px;
+}
+
+.teacher-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.teacher-image-wrapper img {
+  border: 3px solid #dee2e6;
+  transition: transform 0.2s ease;
+}
+
+.teacher-image-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para o textarea do mini currículo */
+.teacher-create-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Estilo para os labels */
+.teacher-create-form .form-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Estilo para os inputs */
+.teacher-create-form .form-control {
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 14px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.teacher-create-form .form-control:focus {
+  border-color: #056DBF;
+  box-shadow: 0 0 0 0.2rem rgba(5, 109, 191, 0.25);
+}
+
+/* Estilo para os botões */
+.teacher-create-form .btn {
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.15s ease-in-out;
+}
+
+.teacher-create-form .btn-primary {
+  background-color: #056DBF;
+  border-color: #056DBF;
+}
+
+.teacher-create-form .btn-primary:hover {
+  background-color: #045a9f;
+  border-color: #045a9f;
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  .teacher-create-form {
+    margin: 15px;
+    padding: 15px;
+  }
+  
+  .teacher-image-wrapper img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  .teacher-create-form .col-12 {
+    margin-bottom: 16px;
+  }
+}
+
+/* Estilo para mensagens de erro e sucesso */
+.teacher-create-form .alert {
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+/* Estilo específico para upload de arquivo */
+.teacher-create-form input[type="file"] {
+  padding: 8px 12px;
+  border: 2px dashed #ced4da;
+  background-color: #f8f9fa;
+}
+
+.teacher-create-form input[type="file"]:focus {
+  border-color: #056DBF;
+  background-color: #fff;
+}

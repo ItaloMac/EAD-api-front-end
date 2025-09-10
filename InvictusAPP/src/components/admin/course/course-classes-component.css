@@ -1,0 +1,242 @@
+/* Container principal seguindo padrão registration-data */
+.course-classes-container {
+    max-width: 80%;
+    margin-left: 20px !important;
+    margin-top: 20px !important;
+}
+
+/* Título */
+.course-classes-title {
+    margin-bottom: 20px !important;
+    color: #333 !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+}
+
+/* Lista de turmas */
+.class-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+/* Item da lista */
+.class-item {
+    width: 100% !important;
+    margin-bottom: 15px !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* Links das turmas */
+.class-item a {
+    display: block !important;
+    width: 100% !important;
+    max-width: 600px !important;
+    padding: 15px 20px !important;
+    background: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    color: #333 !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+    text-align: left !important;
+}
+
+.class-item a:hover {
+    background: #e9ecef !important;
+    color: #056DBF !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    text-decoration: none !important;
+}
+
+.class-item a:focus {
+    outline: 2px solid #056DBF !important;
+    outline-offset: 2px !important;
+}
+
+/* Mensagem de estado vazio */
+.course-classes-container p {
+    color: #666 !important;
+    font-size: 16px !important;
+    text-align: left !important;
+    margin-top: 20px !important;
+    padding: 15px !important;
+    background: #f8f9fa !important;
+    border-radius: 8px !important;
+    border-left: 4px solid #056DBF !important;
+}
+
+/* Loading e error states */
+.course-classes-container .text-center {
+    text-align: left !important;
+    padding: 20px !important;
+    color: #666 !important;
+    font-size: 16px !important;
+}
+
+.course-classes-container .alert {
+    margin-bottom: 20px !important;
+    text-align: left !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .course-classes-container {
+        max-width: 95% !important;
+        margin: 20px auto !important;
+        padding: 20px !important;
+    }
+    
+    .class-item a {
+        padding: 12px 15px !important;
+        font-size: 14px !important;
+        max-width: 100% !important;
+    }
+    
+    .course-classes-title {
+        font-size: 20px !important;
+    }
+}
+
+/* Remove estilos do Bootstrap se necessário */
+.course-classes-container ul,
+.course-classes-container li,
+.course-classes-container a {
+    all: unset !important;
+}
+
+/* Reaplica apenas os estilos necessários */
+.course-classes-container {
+    display: block !important;
+}
+
+.class-list {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.class-item {
+    display: block !important;
+}
+
+.class-item a {
+    display: block !important;
+    cursor: pointer !important;
+}
+
+.div-form {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.custom-form-users {
+    height: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 200px;
+    padding: 0;
+}
+
+.custom-navbar {
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.custom-buttom-navbar {
+    min-height: 38px;
+    min-width: 150px;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0 12px;
+    flex-shrink: 0;
+    background-color: #056DBF;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 576px) {
+    .div-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .custom-form-users {
+        width: 100% !important;
+        flex: none;
+    }
+
+    .custom-buttom-navbar {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

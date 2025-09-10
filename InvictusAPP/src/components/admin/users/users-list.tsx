@@ -14,18 +14,14 @@ function UsersList() {
     
   useEffect(() =>{
       async function CarregarUsuarios(){
-
-        
-          try {
-              const usuarios = await UsersService.getAllUsers();
-              setUsers(usuarios);
-          } catch (Error) {
-              console.error("Erro ao carregar cursos:", Error);
-          }
+        try {
+          const usuarios = await UsersService.getAllUsers();
+          setUsers(usuarios);
+        } catch (Error) {
+          console.error("Erro ao carregar cursos:", Error);
+        }
       }
-
-      CarregarUsuarios();
-
+    CarregarUsuarios();
   }, []);
 
   const handleDelete = async () => {
@@ -41,7 +37,6 @@ function UsersList() {
       setMessageError("Erro ao deletar usuário.");
     }
   };
-
 
   const usuariosFiltrados = usuarios.filter((usuario) =>
     `${usuario.name} ${usuario.lastName} ${usuario.email}`
@@ -85,13 +80,14 @@ function UsersList() {
                         <td>{usuario.lastName}</td>
                         <td>{usuario.email}</td>
                         <td className="text-center">
-                          <Link to={`/admin/aluno/${usuario.id}`} className="bi bi-person-gear mx-2 text-dark" title="Dados do aluno"></Link>
+                          <Link to={`/admin/aluno/${usuario.id}`} className="bi bi-eye-fill mx-2 text-dark" title="Dados do aluno"></Link>
                           <Link to={`/admin/aluno/${usuario.id}/matriculas`} className="bi bi-clipboard2 mx-2 text-dark" title="Matrículas"></Link>
                           <button onClick={() => {
                             setSelectedUserId(usuario.id);
                             setShowModal(true);
                           }}
-                          className="bi bi-person-dash-fill mx-2 text-dark btn btn-link"
+                          className="bi bi-trash-fill text-danger btn-link"
+                          style={{ marginLeft: "8px" }} 
                           title="Excluir"
                         ></button>                        
                       </td>

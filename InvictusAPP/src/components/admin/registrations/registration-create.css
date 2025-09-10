@@ -1,0 +1,33 @@
+.custom-form {
+    max-width: 80% !important;
+    margin: 40px auto !important;
+    padding: 20px !important;
+    --bs-gutter-y: 0 !important; /* zera o espaçamento vertical da .row */
+  }
+  
+  /* Espaço entre os inputs */
+  .custom-form .form-group-custom {
+    margin-bottom: 8px !important;
+  }
+  
+  /* Label compacta */
+  .custom-form label {
+    margin-bottom: 4px !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+  }
+  
+  /* Input compacto */
+  .custom-form input,
+  .custom-form select {
+    padding: 6px 10px !important;
+    height: 36px !important;
+    font-size: 14px !important;
+    border-radius: 4px !important;
+  }
+  
+  /* Botão alinhado à direita */
+  .custom-form .text-end {
+    margin-top: 10px !important;
+  }
+  

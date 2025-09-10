@@ -3,8 +3,14 @@ export interface IModuloService {
     theme: string,
     startDate: string,
     endDate: string,
-    workLoad: string,
-    id_Curso: string,
-    id_Professor: string;
+    workload: string,  // Mudou de workLoad para workload
+    curso: {           // Mudou de id_Curso para curso (objeto)
+        id: string,
+        name: string
+    },
+    professor: {       // Mudou de id_Professor para professor (objeto)
+        id: string,
+        name: string
+    };
     description: string;
 }

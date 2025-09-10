@@ -1,5 +1,5 @@
 import {Api} from '../../providers/Api';
-import { IGetAllUsersService, IGetUserByIdService, IUpdateUserService, IUsersRegistrationService } from '../../interfaces/admin/IUsersService';
+import { IGetAllUsersService, IGetUserByIdService, IUpdateAddressUserService, IUpdateUserService, IUsersRegistrationService } from '../../interfaces/admin/IUsersService';
 
 export const UsersService = {
     async getAllUsers(): Promise<IGetAllUsersService[]> {
@@ -27,6 +27,15 @@ export const UsersService = {
             await Api.put(`api/admin/usuarios/update/${id}`, data);
         } catch (error) {
             console.error("Erro ao atualizar usuario:", error);
+            throw error;
+        }
+    },
+
+    async updateUserAddress(userId: string, addressId: IUpdateAddressUserService): Promise<void> {
+        try {
+            await Api.patch(`api/admin/usuarios/${userId}/endereco`, addressId);
+        } catch (error) {
+            console.error("Erro ao atualizar endereco do usuario:", error);
             throw error;
         }
     },
