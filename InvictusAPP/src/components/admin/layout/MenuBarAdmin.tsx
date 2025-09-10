@@ -20,6 +20,7 @@ function MenuBarAdmin(){
                         <a className="bi bi-people me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} aria-current="page" href="/admin/usuarios">Alunos</a>
                         <a className="bi bi-clipboard2 me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/admin/matriculas">Matrículas</a>
                         <a className="bi bi-backpack2 me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/admin/turmas">Turmas</a>
+                        <a className="bi bi-person-video3 me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/admin/professores">Professores</a>
                         <a className="bi bi-mortarboard me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/admin/cursos">Cursos</a>
                         <a className="bi bi-cash-coin me-2" style={{ fontSize: '1.5rem', color: '#0c2f4f', marginTop: '10px', marginLeft: '-13px' }} href="/admin/financeiro">Financeiro</a>
 

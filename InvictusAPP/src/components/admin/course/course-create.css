@@ -1,0 +1,35 @@
+.course-create-form {
+  margin: 30px;
+  padding: 20px;
+}
+
+.course-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.checkbox-status-course {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.label-status {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+/* Responsividade para manter 2 colunas */
+@media (min-width: 768px) {
+  .col-md-6 {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .course-create-form {
+    margin: 15px;
+    padding: 15px;
+  }
+}

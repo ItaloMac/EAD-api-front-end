@@ -46,10 +46,11 @@ function UserRegistrationComponent({ userId }: { userId: string }) {
                                     </p>
                                 </div>
                                 <div className="text-start">
-                                    <Link to={`/admin/matriculas/${registration.id}/update`} className="btn-custom" title="Editar Matrícula">Editar matrícula</Link>
+                                    <Link to={`/admin/matricula/${registration.id}`} className="btn-custom" title="Editar Matrícula">Editar matrícula</Link>
                                     <Link to={`/admin/matriculas/${registration.id}/update`} className="btn btn-warning py-2 ms-2" title="Editar Matrícula">Trancar matrícula</Link>
                                 </div>
                             </div>
+                            <Link to={`/admin/usuarios/`} className="btn btn-outline-secondary" style={{marginRight:'5px', marginTop:'15px'}} title="voltar">Voltar</Link>
                         </div>
                     ))}
                 </div>

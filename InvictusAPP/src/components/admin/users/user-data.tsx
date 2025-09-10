@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { UsersService } from "../../../Services/Admin/UsersService";
 import "../users/user-data.css";
 import { uploadImageToCloudinary } from "../../../Services/UploadImageService";
+import { Link } from "react-router";
 
 function UserDataCompenent({ userId }: { userId: string }) {
   const [message, setMessage] = useState("");
@@ -14,7 +15,7 @@ function UserDataCompenent({ userId }: { userId: string }) {
     birthDate: "",
     userType: 1,
     profilePhoto: "",
-    vindiCustomerId: ""
+    CustomerId: ""
   });
 
   useEffect(() => {
@@ -29,7 +30,7 @@ function UserDataCompenent({ userId }: { userId: string }) {
           birthDate: response.birthDate || "",
           userType: response.userType,
           profilePhoto: response.profilePhoto || "",
-          vindiCustomerId: response.vindiCustomerId || ""
+          CustomerId: response.CustomerId || ""
         });
       } catch (error) {
         console.error("Erro ao carregar dados do usuário:", error);
@@ -66,7 +67,7 @@ function UserDataCompenent({ userId }: { userId: string }) {
       birthDate: formData.birthDate,
       userType: formData.userType,
       profilePhoto: formData.profilePhoto, // Adicione um valor padrão ou recupere o valor existente
-      vindiCustomerId: "" // Adicione um valor padrão ou recupere o valor existente
+      CustomerId: "" // Adicione um valor padrão ou recupere o valor existente
     };
 
     UsersService.updateUser(userId, newData)
@@ -198,9 +199,13 @@ function UserDataCompenent({ userId }: { userId: string }) {
             id="inputUserType"
             value={formData.userType}
             onChange={handleChange}
+            placeholder="1 para Aluno, 2 para Administrador"
           />
+          <p className="text-muted small mt-2">Selecione 1 para aluno e 2 para Administrador</p>
+
         </div>
         <div className="col-12 text-end mt-3">
+        <Link to={`/admin/usuarios/`} className="btn btn-outline-secondary" style={{marginRight:'5px'}} title="cancelar">Cancelar</Link>
           <button type="submit" className="btn btn-primary">Salvar alterações</button>
         </div>
       </form>

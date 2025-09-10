@@ -1,5 +1,5 @@
 import {Api} from '../../providers/Api';
-import { IGetAllUsersService, IGetUserByIdService, IUpdateUserService, IUsersRegistrationService } from '../../interfaces/admin/IUsersService';
+import { IGetAllUsersService, IGetUserByIdService, IUpdateAddressUserService, IUpdateUserService, IUsersRegistrationService } from '../../interfaces/admin/IUsersService';
 
 export const UsersService = {
     async getAllUsers(): Promise<IGetAllUsersService[]> {
@@ -31,6 +31,15 @@ export const UsersService = {
         }
     },
 
+    async updateUserAddress(userId: string, addressId: IUpdateAddressUserService): Promise<void> {
+        try {
+            await Api.patch(`api/admin/usuarios/${userId}/endereco`, addressId);
+        } catch (error) {
+            console.error("Erro ao atualizar endereco do usuario:", error);
+            throw error;
+        }
+    },
+
     async getRegistrationByUserId(userId:string): Promise<IUsersRegistrationService[]> {
         try {
             const response = await Api.get<IUsersRegistrationService[]>(`api/admin/usuarios/${userId}/matriculas`);
@@ -38,6 +47,16 @@ export const UsersService = {
         }
         catch (error) {
             console.error("Erro ao buscar matriculas do usuario:", error);
+            throw error;
+        }
+    },
+
+    async deleteUser(id: string): Promise<void> {
+        try {
+            await Api.delete(`api/admin/usuarios/delete/${id}`);
+        } catch (error)
+        {
+            console.error("Erro ao deletar usuario:", error);
             throw error;
         }
     }

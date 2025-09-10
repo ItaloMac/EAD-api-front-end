@@ -14,7 +14,8 @@ export interface IGetUserByIdService {
     birthDate: string;
     profilePhoto: string;
     userType: number;
-    vindiCustomerId: string;
+    CustomerId: string;
+    addressId: string;  
 }
 
 export interface IUpdateUserService {
@@ -26,7 +27,7 @@ export interface IUpdateUserService {
     birthDate: string;
     profilePhoto: string;
     userType: number;
-    vindiCustomerId: string;
+    CustomerId: string;
 }
 
 export interface IUsersRegistrationService {
@@ -42,4 +43,8 @@ export interface IUsersRegistrationService {
             name: string; 
         };
     };
+}
+
+export interface IUpdateAddressUserService {
+    addressId: string;
 }
